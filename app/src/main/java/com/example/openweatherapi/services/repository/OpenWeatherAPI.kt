@@ -11,5 +11,6 @@ interface OpenWeatherAPI {
         @Query("lat") lat : Double,
         @Query("lon") lon: Double,
         @Query("appid") appid: String,
-        @Query("units") units: String) : Response<MainForecastModel>
+        @Query("units") units: String
+    ) : Response<MainForecastModel>
 }

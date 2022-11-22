@@ -1,9 +1,11 @@
 package com.example.openweatherapi
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -25,7 +27,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: AdapterWeather
     private lateinit var forecastData: ArrayList<ForecastModel>
@@ -58,8 +60,35 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         val layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         binding.rvForecast.layoutManager = layoutManager
         binding.rvForecast.adapter = adapter
+        binding.btnhome.isVisible = false
+        binding.btnsearch.isVisible = false
+        binding.btnmenulist.setOnClickListener{
+            val animationFadeOut = AnimationUtils.loadAnimation(this, com.example.openweatherapi.R.anim.fade_out)
+            val animationFadeIn = AnimationUtils.loadAnimation(this, com.example.openweatherapi.R.anim.fade_in)
+            if(binding.btnhome.isVisible == false){
+                binding.btnhome.isVisible = true
+                binding.btnsearch.isVisible = true
+                binding.btnhome.startAnimation(animationFadeIn)
+                binding.btnsearch.startAnimation(animationFadeIn)
+            }
+            else{
+                binding.btnhome.isVisible = false
+                binding.btnsearch.isVisible = false
+                binding.btnhome.startAnimation(animationFadeOut)
+                binding.btnsearch.startAnimation(animationFadeOut)
+            }
 
+        }
+        binding.btnhome.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnsearch.setOnClickListener{
+            val intent = Intent(this, SearchWeather::class.java)
+            startActivity(intent)
+        }
     }
+
 
     private fun WeatherData(lat: Double, lon : Double) {
         super.onResume()
@@ -125,6 +154,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     private fun LoadingScreen(){
         binding.imgloading.isVisible = true
+        binding.btnmenulist.isVisible = false
         object : CountDownTimer(3000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
 
@@ -132,7 +162,10 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
             override fun onFinish() {
                 binding.imgloading.isVisible = false
+                binding.btnmenulist.isVisible = true
             }
         }.start()
     }
+
+
 }

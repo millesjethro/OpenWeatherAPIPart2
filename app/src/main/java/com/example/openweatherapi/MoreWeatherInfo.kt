@@ -165,6 +165,7 @@ class MoreWeatherInfo : AppCompatActivity(), View.OnClickListener {
         binding.imgspeed.setOnClickListener(this)
         binding.imgtemp.setOnClickListener(this)
         binding.btnClos.setOnClickListener(this)
+
     }
 
     private fun LoadingScreen(){
