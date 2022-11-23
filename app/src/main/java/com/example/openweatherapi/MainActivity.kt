@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.openweatherapi.adapters.AdapterWeather
 import com.example.openweatherapi.constants.API_KEY
 import com.example.openweatherapi.databinding.ActivityMainBinding

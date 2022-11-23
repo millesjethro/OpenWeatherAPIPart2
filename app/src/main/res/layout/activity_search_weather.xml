@@ -71,7 +71,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/makemevisible"
-        android:layout_width="414dp"
+        android:layout_width="match_parent"
         android:layout_height="546dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/ic_kyoto"
@@ -122,10 +122,10 @@
             android:background="@drawable/humidity"
             app:layout_constraintBottom_toBottomOf="@+id/img2"
             app:layout_constraintEnd_toEndOf="@+id/img2"
-            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/img2"
             app:layout_constraintTop_toTopOf="@+id/img2"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge8"
@@ -134,10 +134,10 @@
             android:background="@drawable/ic_maxtemp"
             app:layout_constraintBottom_toBottomOf="@+id/img1"
             app:layout_constraintEnd_toEndOf="@+id/img1"
-            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/img1"
             app:layout_constraintTop_toTopOf="@+id/img1"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
 
         <TextView
@@ -180,10 +180,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img1"
             app:layout_constraintEnd_toEndOf="@+id/img1"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/img1"
             app:layout_constraintTop_toTopOf="@+id/img1"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.85" />
 
 
         <TextView
@@ -196,10 +196,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/img2"
             app:layout_constraintEnd_toEndOf="@+id/img2"
-            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/img2"
             app:layout_constraintTop_toTopOf="@+id/img2"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -433,31 +433,31 @@
             android:id="@+id/windspeedvalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.0 m/s"
+            android:text="0.00 m/s"
             android:textColor="#000000"
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="@+id/imageView10"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/pressurevalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.0 m/s"
+            android:text="0000 hPa"
             android:textColor="#000000"
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="@+id/imageView7"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="@+id/imageView7"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/grdpressvalue"
@@ -469,10 +469,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toTopOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.575" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/seapressvalue"
@@ -484,25 +484,27 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.575" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/CloudValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0000 hPa"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Broken Clouds"
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="12dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView20"
             app:layout_constraintEnd_toEndOf="@+id/imageView20"
-            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView20"
             app:layout_constraintTop_toTopOf="@+id/imageView20"
-            app:layout_constraintVertical_bias="0.575" />
+            app:layout_constraintVertical_bias="0.65" />
 
         <TextView
             android:id="@+id/maxtempvalue"
@@ -514,10 +516,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="@+id/imageView8"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.562" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/mintempvalue"
@@ -529,10 +531,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="@+id/imageView9"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="@+id/imageView9"
-            app:layout_constraintVertical_bias="0.562" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/gustspeedvalue"
@@ -544,25 +546,25 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintEnd_toEndOf="@+id/imageView11"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toTopOf="@+id/imageView11"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/winddirectionvalue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.0 m/s"
+            android:text="000 SE"
             android:textColor="#000000"
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
             app:layout_constraintEnd_toEndOf="@+id/imageView13"
-            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView13"
             app:layout_constraintTop_toTopOf="@+id/imageView13"
-            app:layout_constraintVertical_bias="0.56" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <ImageView
             android:id="@+id/imge"
@@ -571,10 +573,10 @@
             android:background="@drawable/speedometer"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="@+id/imageView10"
-            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge4"
@@ -583,10 +585,10 @@
             android:background="@drawable/pressure"
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="@+id/imageView7"
-            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="@+id/imageView7"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge9"
@@ -595,10 +597,10 @@
             android:background="@drawable/earthelement"
             app:layout_constraintBottom_toBottomOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="@+id/imageView5"
-            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toTopOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge10"
@@ -607,10 +609,10 @@
             android:background="@drawable/sealevel"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge5"
@@ -619,10 +621,10 @@
             android:background="@drawable/ic_maxtemp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintEnd_toEndOf="@+id/imageView8"
-            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge7"
@@ -631,10 +633,10 @@
             android:background="@drawable/ic_mintemp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toEndOf="@+id/imageView9"
-            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="@+id/imageView9"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge2"
@@ -643,10 +645,10 @@
             android:background="@drawable/dashingaway"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintEnd_toEndOf="@+id/imageView11"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toTopOf="@+id/imageView11"
-            app:layout_constraintVertical_bias="0.593" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <ImageView
             android:id="@+id/imge3"
@@ -655,10 +657,10 @@
             android:background="@drawable/compassnorth"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
             app:layout_constraintEnd_toEndOf="@+id/imageView13"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/imageView13"
             app:layout_constraintTop_toTopOf="@+id/imageView13"
-            app:layout_constraintVertical_bias="0.593" />
+            app:layout_constraintVertical_bias="0.5" />
 
         <TextView
             android:id="@+id/textView25"
